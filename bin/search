@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+export PYTHONUNBUFFERED=1
 while read -r line; do
     echo $line | openai-embeddings | openai-request-post v1/embeddings
 done | search-decode
