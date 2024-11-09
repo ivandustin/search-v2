@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+export PYTHONUNBUFFERED=1
+json-get data 0 embedding | json-to-numpy | numpy-unsqueeze | EFSEARCH=256 faiss-get $SEARCH_INDEX $SEARCH_RESULTS | line-map $SEARCH_MAP

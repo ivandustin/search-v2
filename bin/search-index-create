@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+faiss-create $1.index --string HNSW --ef 256 < $1.embed
